@@ -1,4 +1,4 @@
-# Back to the Basic, JAVA
+# Back to the Basic, JAVA - OOP / JAVA 기본개념
 
 ## 데이터 타입
 *  Primitive data type
@@ -97,3 +97,48 @@
     - 메소드 영역 : 분석이 완료 된 클래스와 메소드 정보를 생성하고 Static 변수를 생성
     - 스택 영역 : 메소드 동작을 위한 공간을 제공, 호출된 메소드, 변수정보, 파라미터 값 등이 저장되고 동작이 완료되면 사라진다.
     - 힙 영역 : 생성자를 이용해 성생된 객체는 힙 영역에 저장, 가비지 컬렉션(GC)를 수행
+
+    # Back to the Basic, JAVA - Java Collection
+
+    ## Collection 프레임워크, JCF
+      - java.util.Collection 인터페이스를 상속받은 Set, List 계열의 자료구조와 java.util.Map 인터페이스를 상속받은 Map계열의 자료 구조로 나눌 수 있다.
+
+      | 계열 | 인터페이스 | 특 징 |
+      | :----- | :---:| ------------- |
+      |Collection|Set|중복을 허용하지 않고 순서가 없다.|
+      |Collection|List|중복을 허용하고 순서가 있다.|
+      |Collection|Queue|FIFO방식으로 처음 넣은 자료가 처음 나온다.|
+      |Map|Map|키(Key)와 값(Value)가 하나의 자료로 저장된다.|
+
+
+      - Vector 클래스와 HashTable 클래스를 사용하지 않는 이유
+        - 성능을 보강한 다양한 자료구조가 추가되면서 권장하지 않는다.
+        - <b>멀티스레드 상황에서 안전하게 동작하기 위해 내부적으로 동기화 작업을 수행</b>한다.
+        하지만 멀티스레드 환경이 아닌 경우가 대부분이라서 이는 오히려 성능을 떨어뜨리는 중요한 요인으로 작용한다.
+        - 하위 호환을 위해 남겨두었지만 Vector 대신 ArrayList 클래스를, HashTable 클래스 대신 HashMap 클래스를 사용하길 권장한다.
+
+    ### 컬렉션 뷰(Collection View)
+      - Enumeration(구)과 Iterator(신)의 차이
+        - Iterator에서만 remove() 제공한다.
+        - Iterator에서는 앞방향으로 이동이 가능하다.
+          - hasPrevious(), previous()
+
+    ### 컬렌션 정렬
+    - 가장 손쉬운 방법은 기본 정렬을 제공하는 TreeSet이나 TreeMap 컬렉션을 이용한다.
+    - Comparable, Comparator 인터페이스를 이용해 정렬 가능하다.
+    - Comparator의 compare을 이용해 원하는 조건으로 정렬이 가능하다.
+
+    ### JCF 유틸리티
+    - sort : 리스트를 정렬한다.
+    - binarySearch : Binary Search 알고리즘을 이용하여 리스트에서 원하는 객체를 찾아준다.
+    - reverse : 정렬된 리스트를 반대로 재정렬한다.
+    - suffle : 정렬된 리스트를 무작위로 섞는다.
+    - fill : 리스트의 모든 객체를 인자로 넘어온 객체로 변경한다.
+    - copy : 리스트를 복사한다.
+    - min : 컬렉션에서 가장 작은 객체를 리턴한다.
+    - max : 컬렉션에서 가장 큰 객체를 리턴한다.
+    - rotate : 리스트를 distance만큼 순환시킨다.
+    - replaceAll : 리스트에 있는 oldValue를 newValue로 교체한다.
+    - indexOfSubList : target 리스트에서 source리스트를 포함하고 있을 경우 source리스트의 종료위치를 리턴한다.
+    - swap : 리스트의 x와 y위치의 객체를 교환한다.
+    - addAll : 모든 인자를 합한다.
