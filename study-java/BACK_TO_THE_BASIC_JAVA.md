@@ -2,12 +2,15 @@
 
 ## 데이터 타입
 *  Primitive data type
-  - int, boolean과 같은 객체가 아닌 순수한 데이터 타입
-  - boolean, char, byte, short, int, long, float, double
-
+    ```
+    - int, boolean과 같은 객체가 아닌 순수한 데이터 타입
+    - boolean, char, byte, short, int, long, float, double
+    ```
   * Reference data type
-  - Primitive 데이터 타입을 제외한 모든 객체 데이터 타입
-  - Primitive 데이터 타입도 각 타입에 해당하는 Wrapper 클래스를 이용해 객체로 변환할 수 있다. (예, Integer, Boolean, Character 등)
+    ```
+    - Primitive 데이터 타입을 제외한 모든 객체 데이터 타입
+    - Primitive 데이터 타입도 각 타입에 해당하는 Wrapper 클래스를 이용해 객체로 변환할 수 있다. (예, Integer, Boolean, Character 등)
+    ```
 
 ## 생성자(Constructor)
   - new 키워드를 이용하여 객체로 생성
