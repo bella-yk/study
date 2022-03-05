@@ -9,7 +9,8 @@
   * Reference data type
     ```
     - Primitive 데이터 타입을 제외한 모든 객체 데이터 타입
-    - Primitive 데이터 타입도 각 타입에 해당하는 Wrapper 클래스를 이용해 객체로 변환할 수 있다. (예, Integer, Boolean, Character 등)
+    - Primitive 데이터 타입도 각 타입에 해당하는 Wrapper 클래스를 이용해 객체로 변환할 수 있다. 
+      (예, Integer, Boolean, Character 등)
     ```
 
 ## 생성자(Constructor)
@@ -39,7 +40,7 @@
     - 캡슐화를 위해 접근제한자(Access Modifier)를 제공
 
       ```
-        - 접근 가능 범위
+        - 접근 가능 범위 (뒤로 갈 수록 범위가 넓어짐)
         private -> default -> protected -> public
 
         - private : 외부에서 접근 불가
