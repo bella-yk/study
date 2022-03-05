@@ -40,7 +40,7 @@
     - 캡슐화를 위해 접근제한자(Access Modifier)를 제공
 
       ```
-        - 접근 가능 범위
+        - 접근 가능 범위 (뒤로 갈 수록 범위가 넓어짐)
         private -> default -> protected -> public
 
         - private : 외부에서 접근 불가
