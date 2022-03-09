@@ -2,7 +2,7 @@
 
 1. mongodb 설치
 ```
-1. 설치 가능한 mongodb검색
+1. 설치 가능한 mongodb 검색
 ➜  ~ brew search mongodb
 
 2. Tap, Brew tap명령은 설치 가능한 software를 확장시켜 준다.
