@@ -85,3 +85,64 @@ create connection => localhost
   - 메모리 사용량이 크다
   - 정합성이 떨어진다
   - sql을 완전히 이전할 수 없다.
+
+## Spring Boot MongoDB 연동
+
+### pom.xml
+```
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-mongodb</artifactId>
+</dependency>
+```
+
+###application.properties
+```
+spring.data.mongodb.host=localhost
+spring.data.mongodb.port=27017
+spring.data.mongodb.database=bella
+```
+
+
+#### 1. 도큐먼트 스키마 작성
+@Document 어노테이션으로 MongoDB의 Collection을 지정한다
+```
+@Document("users")
+@Getter
+@Setter
+public class Users {
+    @Id
+    private String _id;
+
+    private String user_id;
+
+    private String name;
+}
+```
+
+#### 2. mongoTemplete 으로 crud 작성
+```
+
+@Service
+public class UserService {
+    @Autowired
+    private MongoTemplate mongoTemplate;
+
+    public List<Users> getUserList() {
+        return mongoTemplate.findAll(Users.class);
+    }
+
+    public Users getUserById(String userId) {
+        Query query = new Query().addCriteria(Criteria.where("user_id").is(userId));
+        return mongoTemplate.findOne(query, Users.class);
+    }
+
+    public Users saveUsers(Users users) {
+        return mongoTemplate.save(users);
+    }
+
+    public DeleteResult deleteUser(Users users) {
+        return mongoTemplate.remove(users);
+    }
+}
+```

@@ -15,7 +15,6 @@ public class UserService {
     private MongoTemplate mongoTemplate;
 
     public List<Users> getUserList() {
-//        Query query = new Query().addCriteria(Criteria.where("title").is(title));
         return mongoTemplate.findAll(Users.class);
     }
 
