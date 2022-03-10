@@ -146,3 +146,5 @@ public class UserService {
     }
 }
 ```
+
+### 3. RepositoryImpl로 작성
