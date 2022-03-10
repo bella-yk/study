@@ -36,6 +36,12 @@
   - @Aspect 어노테이션을 이용해 이 클레스가 Aspect를 나타내는 클래스라는 것을 명시하고, @Component를 붙여 스프링 빈으로 등록한다.
   - @Around 어노테이션을 이용해 특정 Advice를 실행한다는 의미이다.
 
+4. 객체지향의 5원칙(SOLID) 
+- SRP(Single Responsibility Principle): 단일 책임 원칙 : 클래스 목적은 한개야
+- OCP(Open Closed Priciple): 개방 폐쇄 원칙 : 확장에 대해서는 열려있고, 변경에는 닫혀있다
+- LSP(Listov Substitution Priciple): 리스코프 치환 원칙 : 하위 > 상위역할 가능
+- ISP(Interface Segregation Principle): 인터페이스 분리 원칙 > 인터페이스 내의 메소드는 최소화
+- DIP(Dependency Inversion Principle): 의존 역전 원칙 > 구체적인게 추상화 된거에 의존해야한다.
 
 ##nc 면접 질문
 
