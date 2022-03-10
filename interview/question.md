@@ -68,6 +68,7 @@
 
 2. CS
   - 데드락이란?
+    - 두개 이상의 프로세스가 이미 점유된 자원을 계속 기다리면서 무한 대기에 
   - 스레드와 프로세스 차이
   - IOC(Inversion of Control), DI(Dependency Injection)
     - ioc : 제어의 역전, 제어권이 컨테이너로 넘어감으로써 스프링에서 di, aop 등이 가능해짐
