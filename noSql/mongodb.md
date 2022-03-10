@@ -96,7 +96,7 @@ create connection => localhost
 </dependency>
 ```
 
-###application.properties
+### application.properties
 ```
 spring.data.mongodb.host=localhost
 spring.data.mongodb.port=27017
